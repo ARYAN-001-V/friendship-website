@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Friendship</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background: #f9f9f9;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border: 2px solid #008cba;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #008cba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f75;
+    }
+    #message {
+      margin-top: 40px;
+      font-size: 24px;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to Friendship Wishes!</h1>
+  <p>Enter your name, and we'll wish you a Happy Friendship!</p>
+
+  <input type="text" id="nameInput" placeholder="Enter your name" />
+  <button onclick="wishFriendship()">Wish Me!</button>
+
+  <div id="message"></div>
+
+  <script>
+    function wishFriendship() {
+      const name = document.getElementById('nameInput').value.trim();
+      const messageDiv = document.getElementById('message');
+      if(name) {
+        messageDiv.textContent = `Happy Friendship Day, ${name}! Stay blessed with wonderful friends! 😊`;
+      } else {
+        messageDiv.textContent = 'Please enter your name to get a wish.';
+      }
+    }
+  </script>
+
+</body>
+</html>
